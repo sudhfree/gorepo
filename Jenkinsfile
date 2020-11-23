@@ -1,1 +1,2 @@
+@Library('sharedlib') _
 test()
