@@ -7,7 +7,7 @@ stages{
 stage("setting the agent")
 {
   steps{
-   test
+   test()
   }
 }
 }
