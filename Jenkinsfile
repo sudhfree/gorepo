@@ -1,2 +1,15 @@
 @Library('sharedlib') _
-test
+pipeline
+{
+agent any
+
+stages{
+stage("setting the agent")
+{
+  steps{
+  test
+  }
+}
+}
+
+}
