@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        dockerfile true
+        dockerfile {
+		args "-v /etc/passwd:/etc/passwd"
+		}
          }
 
     stages {
