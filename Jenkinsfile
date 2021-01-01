@@ -1,16 +1,15 @@
-@Library('sharedlib@master') _
-pipeline
-{
-agent any
+pipeline {
+    agent {
+        dockerfile true
+         }
 
-stages{
-stage("setting the agent")
-{
-  steps{
-   test()
-  }
+    stages {
+        stage('Hello') {
+            steps {
+                sh 'id'
+                sh 'npm version'
+                sh 'cdk version'
+            }
+        }
+    }
 }
-}
-
-}
-
